@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      /* label {
+        display: block;
+      }*/
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <div>
+        <label for="EmailAdress">Email:</label>
+        <input type="text" name="EmailAdress" placeholder="example@some.com">
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="8 characters min.">
+      </div>
+      <br/>
+      <div>
+        <div>
+          <label for="FirstName">First Name:</label>
+          <input type="text" name="FirstName"><br/><br/>
+          <aside>
+            <label for="LastName">Last Name</label>
+            <input type="text" name="LastName">
+            <label for="BirthDate">Date of Birth:</label>
+            <input type="date" name="BirthDate" >
+          </aside>
+        </div>
+        <br/>
+        <div>
+          <label for="PhoneNumber">Phone Number:</label>
+          <input type="number" name="PhoneNumber" placeholder="+34 XXX XXX XXX">
+        </div>
+      </div>
+      <br/>
+      <div>
+          <label><b>Plan selected:</b></label>
+
+          <input type="radio" name="Plans" value="PlanFree" id="PlanFree">
+          <label for="PlanFree">Free Plan: free</label>
+
+          <input type="radio" name="Plans" value="Plan1" id="Plan1">
+          <label for="Plan1">Plan 1: 20$</label>
+
+          <input type="radio" name="Plans" value="Plan2" id="Plan2">
+          <label for="Plan2">Plan 2: 40$</label>
+
+          <input type="radio" name="Plans" value="Plan3" id="Plan3">
+          <label for="Plan 3">Plan 3: 60$</label>
+        <br>
+          <label for="ProPlanCheck">Pro Plan</label>
+          <input type="checkbox" name="ProPlanCheck">
+      </div>
+      <br>
+      <div>
+          <label for="CreditCardNumb">Credit Card Number:</label>
+          <input type="number" name="CreditCardNumb" id="CreditCardNumb">
+          <br>
+          <label for="CreditCardExp">Expiration date:</label>
+          <input type="month" name="CreditCardExp" id="CreditCardExp">
+          <label for="CVC">C.V.C.:</label>
+          <input type="password" name="CVC" id="CVC">
+          <br><br>
+          <label for="BillingAdress">Billing Adress:</label>
+          <input type="text" name="BillingAdress" id="BillingAdress">
+      </div>
+      <div>
+        <br><button>Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
+ 

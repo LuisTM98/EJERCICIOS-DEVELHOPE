@@ -1,0 +1,83 @@
+.navbar{
+    background-color: rgb(30, 50, 50);
+    align-items: center;
+    height: 50px;
+    display: flex;
+}
+
+.titleNav{
+    margin: 10px;
+    color: white;
+    font-family: 'Lucida Sans Unicode';
+    text-decoration: none;
+    font-size: larger;
+    float: left;
+    text-align: center;
+}
+
+.buttonHome{
+    margin: 10px;
+    color: white;
+    font-family: 'Lucida Sans Unicode';
+    text-decoration: none;
+    font-size: large;
+    float: left;
+    text-align: center;
+}
+
+.buttonLink{
+    margin: 10px;
+    color: lightgray;
+    font-family: 'Lucida Sans Unicode';
+    text-decoration: none;
+    font-size: large;
+    float: left;
+    text-align: center;
+}
+
+.buttonDropdown{
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    text-decoration: none;
+    color: lightgray;
+    font-family: 'Lucida Sans Unicode';
+    font-size: large;
+    float: left;
+    text-align: center;
+}
+
+.buttonDisabled{
+    margin: 10px;
+    color: gray;
+    font-family: 'Lucida Sans Unicode';
+    text-decoration: none;
+    font-size: large;
+    float: left;
+    text-align: center;
+}
+
+.SearchSection{
+    margin-left: auto;
+}
+
+.inputSearch{
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    font-size: large;
+}
+
+.buttonSearch{
+    margin: 10px;
+    background-color: transparent;
+    color: green;
+    font-family: 'Lucida Sans Unicode';
+    text-decoration: none;
+    font-size: larger;
+    text-align: center;
+    border-style: solid;
+    border-color: green;
+    border-radius: 5px;
+
+}

@@ -1,0 +1,30 @@
+.delimitation{
+    display: flex;
+    width: inherit;
+    margin: 0;
+}
+
+#yellow{
+    order: 1;
+    flex-grow: 0;
+}
+
+#red{
+    order: 2;
+    flex-grow: 0;
+}
+
+#green{
+    order: 3;
+    flex-grow: 0;
+}
+
+#orange{
+    order: 4;
+    flex-grow: 1;
+}
+
+#blue{
+    order: 5;
+    flex-grow: 0;
+}

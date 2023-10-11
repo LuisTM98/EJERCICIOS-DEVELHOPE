@@ -1,0 +1,70 @@
+.LeGrid{
+    display: grid;
+    grid-template-columns: auto;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.LeItem{
+    font-size: larger;
+    padding: 20px;
+    border: 1px solid darkslategray;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Resultado{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: inherit;
+}
+
+.Resultado > .LeItem{
+    background-color: gray;
+    color: white;
+    text-align: right;
+}
+
+.operadores{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: inherit;
+    grid-column: 1 / 5;
+    text-align: center;
+}
+
+.operadores > .LeItem{
+    background-color: rgb(165, 196, 194);
+    color: black;
+    font-weight: bolder;
+}
+
+.numeros{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: inherit;
+    grid-column: 1 / 5;
+    text-align: center;
+}
+
+.numeros > .LeItem{
+    background-color: whitesmoke;  
+    color: black;
+    font-weight: bold;
+}
+
+.solucionador{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 4;
+    grid-row: 1 / 5;
+    padding: 20px;
+
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: 1px solid darkslategray;
+    background-color: crimson;
+}
+

@@ -1,0 +1,34 @@
+#green{
+    grid-area: iGreen;
+}
+
+#yellow{
+    grid-area: iYellow
+}
+
+#red{
+    grid-area: iRed
+}
+
+#orange{
+    grid-area: iOrange;
+}
+
+#blue{
+    grid-area: iBlue;
+}
+
+.LeGrid{
+    display: grid;
+    grid-template-areas:
+        'iGreen iGreen iGreen'
+        'iYellow iRed iBlue'
+        'iYellow iRed iBlue'
+        'iOrange iOrange iBlue'    
+    ;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}

@@ -58,6 +58,8 @@
 }
 
 .SearchSection{
+    display: flex;
+    flex-direction: row-reverse;
     margin-left: auto;
 }
 
@@ -87,3 +89,34 @@
     border-color: green;
     background-color: green;
 }
+
+/* HAMBURGER ICON */
+
+.hamburger{
+    display: none;
+    height: 60px;
+    width: 60px;
+    padding: 0px;
+    background-color: transparent;
+    border: none;
+}
+
+.roundedRow{
+    background-color: darkslategray;
+    margin: 4px;
+    height: calc(60px*0.15);
+    max-width: auto;
+    border-radius: calc(60px*0.15);
+}
+
+/* HAMBURGER ENABLED */
+
+@media (max-width: 768px) {
+    .navbar{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+

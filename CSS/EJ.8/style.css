@@ -1,18 +1,44 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+
+.posts{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HE PUESTO MEDIA QUERYS PARA QUE VARIE A GRID, Y LUEGO A FLEX COLUMN */
+
+@media (max-width: 768px){
+    .posts {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 375px){
+    .posts {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .catcard{
     display: flex;
     flex-direction: column;
     max-height: fit-content;
-    max-width: 350px;
+    max-width: 250px;
     background: rgb(135,135,135);
     background: linear-gradient(180deg, rgb(79, 79, 79) 0%, rgb(242, 242, 242) 100%);
     border-radius: 10px;
+    margin: 10px;
 }
 
 .cardheader{
     display: flex;
+    max-width: inherit;
     flex-direction: row;
 }
 
@@ -46,8 +72,9 @@ body {
         }
 
 .actualpic{
-    width: 350px;
-    height: 175px;
+    height: 100%;
+    width: 100%;
+    max-width: inherit;
     object-fit: cover;
 }
 

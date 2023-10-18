@@ -3,6 +3,7 @@
     align-items: center;
     height: 50px;
     display: flex;
+    overflow: hidden;
 }
 
 .titleNav{
@@ -61,9 +62,19 @@
     display: flex;
     flex-direction: row-reverse;
     margin-left: auto;
+    height: inherit;
+}
+
+.SearchSection form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 5px;
+    gap: 5px;
 }
 
 .inputSearch{
+    margin: auto;
     padding: 7px;
     border: none;
     border-radius: 5px;
@@ -71,7 +82,7 @@
 }
 
 .buttonSearch{
-    margin: 10px;
+    margin: auto;
     background-color: transparent;
     color: green;
     font-family: 'Lucida Sans Unicode';

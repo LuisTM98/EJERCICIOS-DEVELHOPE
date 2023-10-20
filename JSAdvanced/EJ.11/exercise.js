@@ -1,5 +1,9 @@
-function adultFilter(persons) {
-  // ...
+function adultFilter(givenArray) {
+  let filteredAdults = givenArray.filter(check)
+  function check(edad){
+    return edad.age >= 18;
+  }
+  return filteredAdults
 }
 
 const persons = [
@@ -14,16 +18,6 @@ const persons = [
   { name: 'Sandra', age: 34 },
   { name: 'Alice', age: 28 }
 ];
-
-function adultFilter(givenArray){
-  let adultsArray = []
-  for (let i = 0; i < givenArray.length; i++) {
-    if (givenArray[i].age >= 18) {
-      adultsArray.push(givenArray[i])
-    }
-  }
-  return adultsArray
-}
 
 const adults = adultFilter(persons);
 console.log(persons);

@@ -5,7 +5,6 @@ function nicknameMap(persons) {
     tempText = persons[i].name + persons[i].age
     nicknames.push(tempText);
   }
-
   return nicknames
 }
 

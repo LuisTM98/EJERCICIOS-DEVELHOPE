@@ -1,5 +1,5 @@
-function calculateAverageAge(persons) {
-  
+function calculateAverageAge(givenArray) {
+
 }
 
 const persons = [

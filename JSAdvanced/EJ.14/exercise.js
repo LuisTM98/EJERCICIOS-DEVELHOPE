@@ -1,7 +1,7 @@
 function uncompletedNotes(givenArray) {
   let result = givenArray.forEach(filterFunc)                 
   function filterFunc(activity){                              
-    let undoneTodos = activity.filter((todo) => todo.done === false)
+    let undoneTodos = activity.todos.filter((todo) => todo.done === false)
     return undoneTodos
     // function undoneCheckFunc(todo){
     //   return todo.done === false

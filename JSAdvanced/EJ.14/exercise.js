@@ -1,5 +1,15 @@
-function uncompletedNotes(notes) {
-  // ...
+function uncompletedNotes(givenArray) {
+  let uncompletedNotes = []
+  givenArray.forEach(inner)
+  function inner(object){
+    object.todos.forEach(filterFalse)
+    function filterFalse(subArray){
+      function check(subObject){
+        return subObject.done === false
+      }
+      return subArray.filter(check)
+    }
+  }
 }
 
 const notes = [

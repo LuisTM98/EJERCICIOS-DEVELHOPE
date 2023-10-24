@@ -1,6 +1,6 @@
 function adultFilter(givenArray) {
-  function check(givenArray){
-    return givenArray.age >= 18;
+  function check(givenObject){
+    return givenObject.age >= 18;
   }
   return givenArray.filter(check)
 }

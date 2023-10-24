@@ -1,13 +1,14 @@
 function uncompletedNotes(givenArray) {
-  let result = givenArray.forEach(filterFunc)                 //a cada elemento del array le aplico la funcion FilterFunc. El array tiene 2 objetos, Workout y Front-end
-  function filterFunc(activity){                              //la funcion FilterFunc empieza aqui
-    let undoneTodos = activity.todos.forEach(filterFalse)     //la funcion FilterFunc consiste en acceder al ARRAY que esta en la key "todos" en cada objeto, y dentro de dicho array aplicar la funcion filterFalse
-    function filterFalse(todos){                              //la funcion FilterFalse empieza aqui
-      return todos.done === false                             //la funcion FilterFalse devuelve aquellos objetos en el array "todos" cuya key "done" este establecida como boolean false
-    }
+  let result = givenArray.forEach(filterFunc)                 
+  function filterFunc(activity){                              
+    let undoneTodos = activity.filter((todo) => todo.done === false)
     return undoneTodos
+    // function undoneCheckFunc(todo){
+    //   return todo.done === false
+    // }
+    // return undoneTodos
   }
-  console.log(result)       //por algun motivo, el resultado da undefined.
+  console.log(result)       
 }
 
 const notes = [

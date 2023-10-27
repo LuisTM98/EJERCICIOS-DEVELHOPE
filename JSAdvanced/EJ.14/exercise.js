@@ -1,14 +1,10 @@
 function uncompletedNotes(givenArray) {
-  let result = givenArray.forEach(filterFunc)                 
-  function filterFunc(activity){                              
-    let undoneTodos = activity.todos.filter((todo) => todo.done === false)
-    return undoneTodos
-    // function undoneCheckFunc(todo){
-    //   return todo.done === false
-    // }
-    // return undoneTodos
+  let result = []
+  function filterFunc(activity){
+    result.push(activity.todos.filter((subObject) => { return subObject.done === false}))
   }
-  console.log(result)       
+  givenArray.forEach(filterFunc)
+  console.log(result)
 }
 
 const notes = [

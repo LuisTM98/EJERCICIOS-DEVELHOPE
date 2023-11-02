@@ -18,7 +18,11 @@ class Circle {
 }
 
 class AreaCalculator {
-  
+  static calculate(figureVar){
+    if (figureVar instanceof Square) {return figureVar.side * figureVar.side} 
+    else if (figureVar instanceof Rectangle) {return figureVar.width * figureVar.height}
+    else if (figureVar instanceof Circle) {return 3.14 * figureVar.radius * figureVar.radius}
+  }
 }
 
 const square = new Square(4);

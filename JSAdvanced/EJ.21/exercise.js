@@ -13,4 +13,4 @@ console.log('After swap: ', num1, num2); // After swap: 20 10
 let a, b;
 [b, a] = [num1, num2];
 [num1, num2] = [a, b];
-console.log('after swapping back: ', num1, num2)
+console.log('after swapping back: ', num1, num2) //after swapping back: 10 20

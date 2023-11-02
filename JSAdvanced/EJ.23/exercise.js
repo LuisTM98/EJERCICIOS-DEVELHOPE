@@ -1,5 +1,5 @@
-function isAdult(person) {
-  return person.age >= 18;
+function isAdult(parameter) {
+  return parameter >= 18;
 }
 
 const person = {
@@ -9,4 +9,12 @@ const person = {
   age: 25
 };
 
-console.log(isAdult(person));
+let {id, firstName, lastName, age} = person
+
+console.log(isAdult(age)); //da true
+
+//si cambiamos la edad a 7, directamente en la variable age
+
+age = 8
+
+console.log(isAdult(age))

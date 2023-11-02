@@ -18,7 +18,7 @@ class Circle {
 }
 
 class AreaCalculator {
-  // ...
+  
 }
 
 const square = new Square(4);

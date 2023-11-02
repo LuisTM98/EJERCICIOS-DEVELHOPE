@@ -14,13 +14,14 @@ class Person {
   }
 
   get fullName() {
-    return this.firstName + " " + this.lastName
+    return this.firstName + " " + this.lastName + ", " + this.age
   }
 }
 
-const person = new Person('Mario', 'Rossi', -255);
+const person = new Person('Mario', 'Rossi', 26);
 console.log(person.fullName);
 
 person.firstName = 'Maria';
 person.lastName = 'Verdi';
+person.age = -300
 console.log(person.fullName);

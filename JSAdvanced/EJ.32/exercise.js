@@ -5,6 +5,15 @@ const person = {
   age: 25,
 };
 
-const json = JSON.stringify(person);
+let json = filter(JSON.stringify(person));
+
+function filter(jsonObj){
+  let temp = JSON.parse(jsonObj)
+  let {id, firstName, lastName, age} = temp
+  let result = {id, age}
+  return result
+}
 
 console.log(json); // Should return: { id: 1, age: 25 }
+
+//Creo que me he complicado de mas.

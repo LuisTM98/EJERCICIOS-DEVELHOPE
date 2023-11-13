@@ -5,15 +5,25 @@ const person = {
   age: 25,
 };
 
+//METODO 1
 let json = filter(JSON.stringify(person));
+
 
 function filter(jsonObj){
   let temp = JSON.parse(jsonObj)
   let {id, firstName, lastName, age} = temp
-  let result = {id, age}
-  return result
+  // let result = {id, age}
+  // return result
+  
+  return {id, age}
 }
 
-console.log(json); // Should return: { id: 1, age: 25 }
+console.log(json); 
+
+//METODO 2
+
+let json2 = JSON.stringify(person, ["id", "age"]);
+
+console.log(json2)
 
 //Creo que me he complicado de mas.

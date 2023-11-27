@@ -6,4 +6,4 @@ const user = {
 
 let stringifiedUser = JSON.stringify(user)
 
-localStorage.setItem(stringifiedUser)
+localStorage.setItem("userData", stringifiedUser)

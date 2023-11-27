@@ -7,9 +7,14 @@ const user = {
 let stringifiedUser = JSON.stringify(user)
 console.log(stringifiedUser)
 
-localStorage.setItem(stringifiedUser)
+localStorage.setItem("userData", stringifiedUser)
 
 //===============================================================
 
-let gotItem = localStorage.getItem(stringifiedUser)
+let gotItem = localStorage.getItem("userData")
 console.log(gotItem)
+
+
+const items = {...localStorage}
+
+console.log(items, "items")

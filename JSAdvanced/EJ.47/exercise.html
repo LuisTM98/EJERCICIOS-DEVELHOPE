@@ -20,5 +20,7 @@
 </html>
 
 <script>
-  // code here
+  document.querySelectorAll('form > div').forEach((element) => {
+    console.log(element.querySelector('label').innerHTML +' ' + element.querySelector('input').value)
+  })
 </script>

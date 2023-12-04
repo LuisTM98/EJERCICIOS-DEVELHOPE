@@ -18,6 +18,8 @@ const divide = function (a, b) {
 //   console.log(value);
 // }
 
+// ((2 + 4) * (5 + 2) - 2) / 5
+
 const sumArrow = (a,b) => a + b;
 const subtArrow = (a,b) => a - b;
 const multArrow = (a,b) => a * b;

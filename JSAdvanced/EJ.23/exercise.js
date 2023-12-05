@@ -17,4 +17,4 @@ console.log(isAdult(age)); //da true
 
 age = 8
 
-console.log(isAdult(age))
+console.log(isAdult(age)) //da false

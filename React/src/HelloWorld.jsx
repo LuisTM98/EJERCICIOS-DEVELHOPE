@@ -1,11 +1,10 @@
-export function HelloWorld() {
-    return <h2> Hello World! </h2>
-}
+import { Message } from "./Message"
 
-export function App() {
+export function HelloWorld() {
     return (
-        <div>
-            <HelloWorld />
-        </div>
+    <div>
+        <h2> Hello World! </h2>
+        <Message />
+    </div>
     )
 }

@@ -1,10 +1,10 @@
-import { Message } from "./Message"
+import { Message } from "./Message";
 
 export function HelloWorld() {
-    return (
+  return (
     <div>
-        <h2> Hello World! </h2>
-        <Message />
+      <h2> Hello World! </h2>
+      <Message />
     </div>
-    )
+  );
 }

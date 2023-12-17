@@ -28,3 +28,6 @@ export function App3() {
 export function App4(){
   return <Welcome name='Manuel' age={27}/>
 }
+
+//Si no pongo los datos, y no hay default props puestas, el mensaje se renderiza incompleto.
+

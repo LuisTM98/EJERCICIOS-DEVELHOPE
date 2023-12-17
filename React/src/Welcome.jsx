@@ -2,7 +2,7 @@ export function Welcome({name, age}){
     return (
         <div>
             <p>Welcome, {name} </p>
-            <p>You are {age} years old</p>
+            <strong>You are {age} years old</strong>
         </div>
     )
 }

@@ -1,8 +1,8 @@
 export function Welcome({name, age}){
     return (
         <div>
-            <p>Welcome, {name} </p>
-            <strong>You are {age} years old</strong>
+            <p>Welcome, <strong>{name}</strong></p>
+            <p>You are {age} years old</p>
         </div>
     )
 }

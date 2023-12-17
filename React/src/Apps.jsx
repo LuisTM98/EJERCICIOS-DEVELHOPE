@@ -1,5 +1,6 @@
 import { AlertClock } from "./AlertClock";
 import { WelcomeCond } from "./ConditionalWelcome";
+import { Counter } from "./Counter";
 import { HelloWorld } from "./HelloWorld";
 import { Message } from "./Message";
 import { Welcome } from "./Welcome";
@@ -39,5 +40,9 @@ export function App5(){
 
 export function App6(){
   return <AlertClock />
+}
+
+export function App7(){
+  return <Counter leProp={15} initialValue={0}/>
 }
 

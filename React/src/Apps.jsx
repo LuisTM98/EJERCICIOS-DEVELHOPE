@@ -26,5 +26,5 @@ export function App3() {
 // The browser just renders the message
 
 export function App4(){
-  return <Welcome name='Manuel'/>
+  return <Welcome name='Manuel' age={27}/>
 }

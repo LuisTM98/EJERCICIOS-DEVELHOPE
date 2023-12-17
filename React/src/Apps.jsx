@@ -1,3 +1,4 @@
+import { WelcomeCond } from "./ConditionalWelcome";
 import { HelloWorld } from "./HelloWorld";
 import { Message } from "./Message";
 import { Welcome } from "./Welcome";
@@ -30,4 +31,8 @@ export function App4(){
 }
 
 //Si no pongo los datos, y no hay default props puestas, el mensaje se renderiza incompleto.
+
+export function App5(){
+  return <WelcomeCond name='Manuel' age={27}/>
+}
 

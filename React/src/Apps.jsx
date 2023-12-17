@@ -38,6 +38,6 @@ export function App5(){
 }
 
 export function App6(){
-  return <AlertClock wasClicked={onclick} />
+  return <AlertClock />
 }
 

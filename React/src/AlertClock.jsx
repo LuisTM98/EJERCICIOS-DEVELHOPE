@@ -1,9 +1,7 @@
-export function AlertClock({wasClicked}){
-    function handleShowTime(wasClicked){
+export function AlertClock(){
+    function handleShowTime(){
         const now = new Date()
-        if(wasClicked) {
-            alert(`The time right now is ${now}`)
-        }
+        alert(`The time right now is ${now}`)
     }
     return (
         <button onClick={handleShowTime}>Click me!</button>

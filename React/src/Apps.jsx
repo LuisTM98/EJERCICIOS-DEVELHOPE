@@ -1,5 +1,6 @@
 import { HelloWorld } from "./HelloWorld";
 import { Message } from "./Message";
+import { Welcome } from "./Welcome";
 
 export function App1() {
   return <HelloWorld />;
@@ -23,3 +24,7 @@ export function App3() {
 }
 
 // The browser just renders the message
+
+export function App4(){
+  return <Welcome name='Manuel'/>
+}

@@ -41,7 +41,11 @@ export function App5(){
 }
 
 export function App6(){
-  return <AlertClock />
+  function showTime(){
+    const now = new Date()
+    alert(`The time right now is ${now.toLocaleDateString()}`)
+}
+  return <AlertClock onClick={showTime}/>
 }
 
 export function App7(){

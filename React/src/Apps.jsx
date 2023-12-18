@@ -1,3 +1,4 @@
+import { StrictMode } from "react";
 import { AlertClock } from "./AlertClock";
 import { Clock } from "./Clock";
 import { WelcomeCond } from "./ConditionalWelcome";
@@ -48,6 +49,6 @@ export function App7(){
 }
 
 export function App8(){
-  return <Clock />
+  return <StrictMode><Clock /></StrictMode>
 }
 

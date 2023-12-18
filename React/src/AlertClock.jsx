@@ -1,7 +1,7 @@
 export function AlertClock(){
     function showTime(){
         const now = new Date()
-        alert(`The time right now is ${now}`)
+        alert(`The time right now is ${now.toLocaleDateString()}`)
     }
     return (
         <Button label={'Click me!'} buttonWasClicked={showTime}></Button>

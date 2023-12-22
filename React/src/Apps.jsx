@@ -30,29 +30,32 @@ export function App3() {
 
 // The browser just renders the message
 
-export function App4(){
-  return <Welcome name='Manuel' age={27}/>
+export function App4() {
+  return <Welcome name="Manuel" age={27} />;
 }
 
 //Si no pongo los datos, y no hay default props puestas, el mensaje se renderiza incompleto.
 
-export function App5(){
-  return <WelcomeCond name='Manuel' age={27}/>
+export function App5() {
+  return <WelcomeCond name="Manuel" age={27} />;
 }
 
-export function App6(){
-  function showTime(){
-    const now = new Date()
-    alert(`The time right now is ${now.toLocaleDateString()}`)
-}
-  return <AlertClock onClick={showTime}/>
-}
-
-export function App7(){
-  return <Counter leProp={15} initialValue={0}/>
+export function App6() {
+  function showTime() {
+    const now = new Date();
+    alert(`The time right now is ${now.toLocaleDateString()}`);
+  }
+  return <AlertClock onClick={showTime} />;
 }
 
-export function App8(){
-  return <StrictMode><Clock /></StrictMode>
+export function App7() {
+  return <Counter leProp={15} initialValue={0} />;
 }
 
+export function App8() {
+  return (
+    <StrictMode>
+      <Clock />
+    </StrictMode>
+  );
+}

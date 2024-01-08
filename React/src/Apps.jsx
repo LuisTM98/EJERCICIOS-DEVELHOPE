@@ -7,6 +7,7 @@ import { HelloWorld } from "./HelloWorld";
 import { Message } from "./Message";
 import { Welcome } from "./Welcome";
 import { InteractiveWelcome } from "./InteractiveWelcome";
+import { LoginForm } from "./LoginForm";
 
 export function App1() {
   return <HelloWorld />;
@@ -64,5 +65,11 @@ export function App8() {
 export function App9(){
   return(
     <InteractiveWelcome />
+  )
+}
+
+export function App10(){
+  return(
+    <LoginForm/>
   )
 }

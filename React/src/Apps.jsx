@@ -6,6 +6,7 @@ import { Counter } from "./Counter";
 import { HelloWorld } from "./HelloWorld";
 import { Message } from "./Message";
 import { Welcome } from "./Welcome";
+import { InteractiveWelcome } from "./InteractiveWelcome";
 
 export function App1() {
   return <HelloWorld />;
@@ -58,4 +59,10 @@ export function App8() {
       <Clock />
     </StrictMode>
   );
+}
+
+export function App9(){
+  return(
+    <InteractiveWelcome />
+  )
 }

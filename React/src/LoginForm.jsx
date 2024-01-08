@@ -19,6 +19,10 @@ export function LoginForm(){
             return tempObj
         })
     }
+
+    function onLogin(){
+        console.log('ha hecho login')
+    }
     
     // console.log(data)
 
@@ -27,7 +31,7 @@ export function LoginForm(){
             <input type="text" name="username" value={data.username} onChange={handleInputChange}/>
             <input type="text" name="password" value={data.password} onChange={handleInputChange}/>
             <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} /><label>Remember</label>
-            
+            <button disabled={!data.username || !data.password} onClick={onLogin}>login</button>
             <br />
 
             <pre>{JSON.stringify(data, null, 2)}</pre>

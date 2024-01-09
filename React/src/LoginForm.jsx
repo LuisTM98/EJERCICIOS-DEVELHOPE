@@ -67,7 +67,16 @@ export function UncontrolledLoginForm(){
             remember
         }
 
+        const formData = new FormData(event.target)
+
+        const data2 = {
+            username: formData.get('username'),
+            password: formData.get('password'),
+            remember: formData.get('remember') === 'on' ? true : false,
+        }
+
         console.log(data)
+        console.log(data2)
     }
     
     return(

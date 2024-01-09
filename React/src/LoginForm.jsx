@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function LoginForm(onLogin){
+export function LoginForm({onLogin}){
     const [data, setData] = useState({
         username:'',
         password:'',
@@ -19,13 +19,9 @@ export function LoginForm(onLogin){
             return tempObj
         })
     }
-
-    
     
     function handleLoginClick(){
-        function onLogin(tempData){
-            console.log(tempData)
-        }
+        onLogin = (data) => {console.log(data)}
         onLogin(data)
     }
 

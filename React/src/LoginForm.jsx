@@ -30,7 +30,11 @@ export function LoginForm(onLogin){
     }
 
     function handleReset(){
-
+        setData({
+            username:'',
+            password:'',
+            remember: false
+        })
     }
 
     return (

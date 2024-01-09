@@ -34,7 +34,7 @@ export function LoginForm({onLogin}){
     }
 
     return (
-        <div>
+        <form onSubmit={handleLoginClick}>
             <input type="text" name="username" value={data.username} onChange={handleInputChange}/>
             <input type="password" name="password" value={data.password} onChange={handleInputChange}/>
             <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} /><label>Remember</label>
@@ -43,6 +43,6 @@ export function LoginForm({onLogin}){
             <br />
 
             <pre>{JSON.stringify(data, null, 2)}</pre>
-        </div>
+        </form>
         )
 }

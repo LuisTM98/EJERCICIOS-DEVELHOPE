@@ -1,5 +1,9 @@
 import { useState } from "react"
 
+function onLogin(data){
+    console.log(data)
+}
+
 export function LoginForm(){
     const [data, setData] = useState({
         username:'',
@@ -20,11 +24,8 @@ export function LoginForm(){
         })
     }
     
-    function onLogin(data){
-        console.log(data)
-    }
-
-    function handleLoginClick(){
+    function handleLoginClick(event){
+        event.preventDefault()
         onLogin(data)   // no hay que añadir una funcion onLogin como prop, porque todo esta en el mismo componente.
     }                   // de estar en otro archivo, si haria falta
     
@@ -42,7 +43,7 @@ export function LoginForm(){
             <input type="text" name="username" value={data.username} onChange={handleInputChange}/>
             <input type="password" name="password" value={data.password} onChange={handleInputChange}/>
             <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} /><label>Remember</label>
-            <button type="button" disabled={!data.username || !data.password} onClick={handleLoginClick}>Login</button>
+            <button type="submit" disabled={!data.username || !data.password}>Login</button>
             <button type="button" onClick={handleReset}>Reset</button>
             <br />
 

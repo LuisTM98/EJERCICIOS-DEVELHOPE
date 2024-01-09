@@ -51,3 +51,32 @@ export function LoginForm(){
         </form>
         )
 }
+
+export function UncontrolledLoginForm(){
+    
+    function submitEventHandler(event){
+        event.preventDefault()
+
+        const username = event.target.elements.namedItem('username').value
+        const password = event.target.elements.namedItem('password').value
+        const remember = event.target.elements.namedItem('remember').checked
+
+        const data = {
+            username,
+            password,
+            remember
+        }
+
+        console.log(data)
+    }
+    
+    return(
+        <form onSubmit={submitEventHandler}>
+            <input type="text" name="username"/>
+            <input type="password" name="password" />
+            <input type="checkbox" name="remember"/>
+            <button type="submit" name="login">Login</button>
+            <button type="reset" name="reset">Reset</button>
+        </form>
+    )
+}

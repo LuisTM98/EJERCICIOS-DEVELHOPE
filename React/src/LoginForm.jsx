@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export function LoginForm({onLogin}){
+export function LoginForm(){
     const [data, setData] = useState({
         username:'',
         password:'',
@@ -20,10 +20,14 @@ export function LoginForm({onLogin}){
         })
     }
     
-    function handleLoginClick(){
-        onLogin = (data) => {console.log(data)}
-        onLogin(data)
+    function onLogin(data){
+        console.log(data)
     }
+
+    function handleLoginClick(){
+        onLogin(data)   // no hay que añadir una funcion onLogin como prop, porque todo esta en el mismo componente.
+    }                   // de estar en otro archivo, si haria falta
+    
 
     function handleReset(){
         setData({
@@ -38,8 +42,8 @@ export function LoginForm({onLogin}){
             <input type="text" name="username" value={data.username} onChange={handleInputChange}/>
             <input type="password" name="password" value={data.password} onChange={handleInputChange}/>
             <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} /><label>Remember</label>
-            <button disabled={!data.username || !data.password} onClick={handleLoginClick}>Login</button>
-            <button onClick={handleReset}>Reset</button>
+            <button type="button" disabled={!data.username || !data.password} onClick={handleLoginClick}>Login</button>
+            <button type="button" onClick={handleReset}>Reset</button>
             <br />
 
             <pre>{JSON.stringify(data, null, 2)}</pre>

@@ -39,7 +39,7 @@ export function LoginForm(){
     }
 
     return (
-        <form onSubmit={handleLoginClick}>
+        <form onSubmit={handleLoginClick} style={{display:'flex', gap: '12px'}}>
             <input type="text" name="username" value={data.username} onChange={handleInputChange}/>
             <input type="password" name="password" value={data.password} onChange={handleInputChange}/>
             <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} /><label>Remember</label>
@@ -80,10 +80,10 @@ export function UncontrolledLoginForm(){
     }
     
     return(
-        <form onSubmit={submitEventHandler}>
+        <form onSubmit={submitEventHandler} style={{display:'flex', gap: '12px'}}>
             <input type="text" name="username"/>
             <input type="password" name="password" />
-            <input type="checkbox" name="remember"/>
+            <input type="checkbox" name="remember"/><label>Remember</label>
             <button type="submit" name="login">Login</button>
             <button type="reset" name="reset">Reset</button>
         </form>

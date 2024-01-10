@@ -67,9 +67,13 @@ export function App9() {
 }
 
 export function App10() {
+  function onLogin(event, data){
+    event.preventDefault()
+    console.log(data)
+}
   return (
     <div>
-      <LoginForm />
+      <LoginForm onLogin={onLogin}/>
       <UncontrolledLoginForm />
     </div>
   );

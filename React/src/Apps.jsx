@@ -9,6 +9,7 @@ import { Welcome } from "./Welcome";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { LoginForm, UncontrolledLoginForm } from "./LoginForm";
 import { FocusableInput } from "./FocusableInput";
+import { StrictedButtonElement } from "./StrictedButtonElement";
 
 export function App1() {
   return <HelloWorld />;
@@ -82,6 +83,12 @@ export function App10() {
 
 export function App11(){
   return(
-    <FocusableInput/>
+    <div>
+      <FocusableInput/>
+      <br />
+      <StrictMode>
+        <StrictedButtonElement/>
+      </StrictMode>
+    </div>
   )
 }

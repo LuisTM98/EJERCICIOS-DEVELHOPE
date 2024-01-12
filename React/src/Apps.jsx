@@ -8,6 +8,7 @@ import { Message } from "./Message";
 import { Welcome } from "./Welcome";
 import { InteractiveWelcome } from "./InteractiveWelcome";
 import { LoginForm, UncontrolledLoginForm } from "./LoginForm";
+import { FocusableInput } from "./FocusableInput";
 
 export function App1() {
   return <HelloWorld />;
@@ -77,4 +78,10 @@ export function App10() {
       <UncontrolledLoginForm />
     </div>
   );
+}
+
+export function App11(){
+  return(
+    <FocusableInput/>
+  )
 }

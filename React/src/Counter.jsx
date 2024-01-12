@@ -13,17 +13,17 @@ export function Counter({leProp, initialValue}){
     
     function handleIncrement(){
         setter(counter + 1)  //this has to be a function because the variable cant be updated each time otherwise in React
-        leRefCounter.current = 'sum up!'
+        leRefCounter.current = 'sum up!' //ejercicio refs 3
     }
 
     function handleDecrement(){
         setter(counter - leProp)
-        leRefCounter.current = 'downing!'
+        leRefCounter.current = 'downing!' //ejercicio refs 3
     }
 
     function handleReset(){
         setter(initialValue)
-        leRefCounter.current = 'resetting'
+        leRefCounter.current = 'resetting' //ejercicio refs 3
     }
 
     return (

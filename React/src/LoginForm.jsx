@@ -1,8 +1,8 @@
 import { useState } from "react"
 
-function onLogin(data){
-    console.log(data)
-}
+// function onLogin(data){
+//     console.log(data)
+// }
 
 export function LoginForm({onLogin}){
     const [data, setData] = useState({

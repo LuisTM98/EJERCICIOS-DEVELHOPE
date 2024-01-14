@@ -11,6 +11,7 @@ import { LoginForm, UncontrolledLoginForm } from "./LoginForm";
 import { FocusableInput } from "./FocusableInput";
 import { StrictedButtonElement } from "./StrictedButtonElement";
 import { Colors } from "./Colors";
+import { TodoList } from "./TodoList";
 
 export function App1() {
   return <HelloWorld />;
@@ -106,5 +107,18 @@ export function App12(){
 
   return(
     <Colors leColorsArray={colorsArray} />
+  )
+}
+
+export function App13(){
+  return(
+    <TodoList ArrayAsProp={[
+      'Wash the food',
+      'Clean the dishes',
+      'Sleep',
+      'Un-microwave the car',
+      'Kill John Connor',
+      'Sleep but latter',
+  ]}/>
   )
 }

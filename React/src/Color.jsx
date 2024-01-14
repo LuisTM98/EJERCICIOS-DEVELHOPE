@@ -1,5 +1,5 @@
 export function Color({ colors }){
     return(
-        colors.map((item, index) => <li>{item.name}</li>)
+        colors.map((item, index) => <li key={item.id}>{item.name}</li>)
     )
 }

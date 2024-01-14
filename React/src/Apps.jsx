@@ -10,6 +10,7 @@ import { InteractiveWelcome } from "./InteractiveWelcome";
 import { LoginForm, UncontrolledLoginForm } from "./LoginForm";
 import { FocusableInput } from "./FocusableInput";
 import { StrictedButtonElement } from "./StrictedButtonElement";
+import { Colors } from "./Colors";
 
 export function App1() {
   return <HelloWorld />;
@@ -90,5 +91,20 @@ export function App11(){
         <StrictedButtonElement/>
       </StrictMode>
     </div>
+  )
+}
+
+export function App12(){
+  const colorsArray = [
+    {id: 1, name: 'red'},
+    {id: 2, name: 'orange'},
+    {id: 3, name: 'yellow'},
+    {id: 4, name: 'green'},
+    {id: 5, name: 'blue'},
+    {id: 6, name: 'violet'},
+  ]
+
+  return(
+    <Colors leColorsArray={colorsArray} />
   )
 }

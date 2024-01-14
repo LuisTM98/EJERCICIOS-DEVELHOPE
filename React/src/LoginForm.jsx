@@ -40,8 +40,8 @@ export function LoginForm({onLogin}){
     return (
         <div>
             <form onSubmit={(event) => onLogin(event, data)} style={{display:'flex', gap: '12px'}}>
-                <input type="text" name="username" value={data.username} onChange={(event) => handleInputChange(event, "parametro2")}/>
-                <input type="password" name="password" value={data.password} onChange={handleInputChange}/>
+                <input type="text" required="true" name="username" value={data.username} onChange={(event) => handleInputChange(event, "parametro2")}/>
+                <input type="password" required="true" name="password" value={data.password} onChange={handleInputChange}/>
                 <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} /><label>Remember</label>
                 <button type="submit" disabled={!data.username || !data.password}>Login</button>
                 <button type="button" onClick={handleReset}>Reset</button>

@@ -112,13 +112,6 @@ export function App12(){
 
 export function App13(){
   return(
-    <TodoList ArrayAsProp={[
-      'Wash the food',
-      'Clean the dishes',
-      'Sleep',
-      'Un-microwave the car',
-      'Kill John Connor',
-      'Sleep but latter',
-  ]}/>
+    <TodoList />
   )
 }

@@ -46,7 +46,7 @@ export function TodoList() {
     console.log(indexInArray);                      // Como index viene dado en cada caso por su propia posicion, se elimina aquel elemento donde se toca el boton
      const updatedTodosArray = todosArray.filter(   // para saber que indice tiene cada elemento. unicamente para debug.
      (item, index) => index !== indexInArray        
-    );                // =========> // Se crea un nuevo array, filtrado de los elementos con el index indicado.
+    );                                              // =========> // Se crea un nuevo array, filtrado de los elementos con el index indicado.
 
     const copiaDeArray = [...todosArray]
     copiaDeArray.splice(indexInArray, 1)

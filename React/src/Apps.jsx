@@ -12,6 +12,17 @@ import { FocusableInput } from "./FocusableInput";
 import { StrictedButtonElement } from "./StrictedButtonElement";
 import { Colors } from "./Colors";
 import { TodoList } from "./TodoList";
+import { CheckpointNavComp } from "./CheckpointNavComp";
+
+export function CheckpointPractice(){
+  return(
+    <CheckpointNavComp/>
+  )
+}
+
+
+
+
 
 export function App1() {
   return <HelloWorld />;

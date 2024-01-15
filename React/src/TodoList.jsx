@@ -43,11 +43,15 @@ export function TodoList() {
     // Se pasa el index directamente a la funcion onClick del boton. El boton tiene acceso al index, porque esta dentro del elemento li
     // que devuelve la propia funcion Map. Dicha funcion genera un index. Si estuviera fuera, tendria que acceder al index como prop.
 
-    console.log(indexInArray); //para saber que indice tiene cada elemento. unicamente para debug
-    const updatedTodosArray = todosArray.filter(
-      (item, index) => index !== indexInArray
-    ); // =========> // Se crea un nuevo array, filtrado de los elementos con el index indicado.
-    setTodosArray(updatedTodosArray); // Se setea el array al updatedArray                               // Como index viene dado en cada caso por su propia posicion, se elimina aquel elemento donde se toca el boton
+    console.log(indexInArray);                      // Como index viene dado en cada caso por su propia posicion, se elimina aquel elemento donde se toca el boton
+     const updatedTodosArray = todosArray.filter(   // para saber que indice tiene cada elemento. unicamente para debug.
+     (item, index) => index !== indexInArray        
+    );                // =========> // Se crea un nuevo array, filtrado de los elementos con el index indicado.
+
+    const copiaDeArray = [...todosArray]
+    copiaDeArray.splice(indexInArray, 1)
+    console.log(copiaDeArray)
+    setTodosArray(copiaDeArray); // Se setea el array al updatedArray                               
     setInputContent(""); // Se setea a nada el input. Esto en concreto no es necesario como tal en este caso
   }
 

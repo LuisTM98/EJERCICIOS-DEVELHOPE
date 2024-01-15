@@ -9,7 +9,7 @@ export function TodoList() {
 
   const baseTodosArray = [ // Este array contiene las tareas base. Se usa para tener una base no modificable.
     "Wash the food",
-    "Clean the dishes",
+    "Eat the dishes",
     "Sleep",
     "Un-microwave the car",
     "Kill John Connor",

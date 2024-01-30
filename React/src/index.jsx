@@ -1,5 +1,5 @@
 import { createRoot } from "react-dom/client";
-import { App1, App10, App11, App12, App13, App14, App15, App2, App3, App4, App5, App6, App7, App8, App9, CheckpointPractice } from "./Apps";
+import { App1, App10, App11, App12, App13, App14, App15, App16, App2, App3, App4, App5, App6, App7, App8, App9, CheckpointPractice } from "./Apps";
 import { SepDiv } from "./000Separator";
 
 createRoot(document.getElementById("root")).render(
@@ -19,5 +19,6 @@ createRoot(document.getElementById("root")).render(
     <App13 /><SepDiv/>
     <App14 /><SepDiv/>
     <App15 /><SepDiv/>
+    <App16 /><SepDiv/>
   </div>
 );

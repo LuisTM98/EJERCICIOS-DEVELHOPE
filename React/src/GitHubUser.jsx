@@ -20,10 +20,10 @@ export function GitHubUser({ username }) {
   }, [username]);
 
   return (
-    <div>
+    <div style={{display:"flex", gap:'5px', alignItems: 'center'}}>
         {data && <h1>{data.name}</h1>}
-        {data && <h3>{data.login}</h3>}
-        {data && <div><img src={data.avatar}/></div>}
+        {data && <h2>{data.login}</h2>}
+        {data && <div><img src={data.avatar} style={{maxHeight: '30px'}}/></div>}
     </div>
   );
 }

@@ -16,6 +16,7 @@ import { CheckpointNavComp } from "./CheckpointNavComp";
 import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { GitHubUser } from "./GitHubUser";
+import { GitHubUsers } from "./GitHubUsers";
 
 export function CheckpointPractice() {
   return <CheckpointNavComp />;
@@ -149,5 +150,11 @@ export function App14() {
 export function App15(){
   return(
     <GitHubUser username='ltm98'/>
+  )
+}
+
+export function App16(){
+  return(
+    <GitHubUsers />
   )
 }

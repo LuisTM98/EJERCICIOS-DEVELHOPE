@@ -13,16 +13,11 @@ import { StrictedButtonElement } from "./StrictedButtonElement";
 import { Colors } from "./Colors";
 import { TodoList } from "./TodoList";
 import { CheckpointNavComp } from "./CheckpointNavComp";
+import { Container } from "./Container";
 
-export function CheckpointPractice(){
-  return(
-    <CheckpointNavComp/>
-  )
+export function CheckpointPractice() {
+  return <CheckpointNavComp />;
 }
-
-
-
-
 
 export function App1() {
   return <HelloWorld />;
@@ -82,47 +77,53 @@ export function App9() {
 }
 
 export function App10() {
-  function onLogin(event, data){
-    event.preventDefault()
-    console.log(data)
-}
+  function onLogin(event, data) {
+    event.preventDefault();
+    console.log(data);
+  }
   return (
     <div>
-      <LoginForm onLogin={onLogin}/>
+      <LoginForm onLogin={onLogin} />
       <UncontrolledLoginForm />
     </div>
   );
 }
 
-export function App11(){
-  return(
+export function App11() {
+  return (
     <div>
-      <FocusableInput/>
+      <FocusableInput />
       <br />
       <StrictMode>
-        <StrictedButtonElement/>
+        <StrictedButtonElement />
       </StrictMode>
     </div>
-  )
+  );
 }
 
-export function App12(){
+export function App12() {
   const colorsArray = [
-    {id: 1, name: 'red'},
-    {id: 2, name: 'orange'},
-    {id: 3, name: 'yellow'},
-    {id: 4, name: 'green'},
-    {id: 5, name: 'blue'},
-    {id: 6, name: 'violet'},
-  ]
+    { id: 1, name: "red" },
+    { id: 2, name: "orange" },
+    { id: 3, name: "yellow" },
+    { id: 4, name: "green" },
+    { id: 5, name: "blue" },
+    { id: 6, name: "violet" },
+  ];
 
-  return(
-    <Colors leColorsArray={colorsArray} />
-  )
+  return <Colors leColorsArray={colorsArray} />;
 }
 
-export function App13(){
-  return(
-    <TodoList />
-  )
+export function App13() {
+  return <TodoList />;
+}
+
+export function App14() {
+  return (
+    <Container title="This is a container title">
+      <div>
+        <h4>This is a container content. I'm passed as a children!! Not like the title, which is passed as a string prop.</h4>
+      </div>
+    </Container>
+  );
 }

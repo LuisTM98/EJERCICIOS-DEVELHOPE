@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, useState } from "react";
 import { AlertClock } from "./AlertClock";
 import { Clock } from "./Clock";
 import { WelcomeCond } from "./ConditionalWelcome";
@@ -14,6 +14,7 @@ import { Colors } from "./Colors";
 import { TodoList } from "./TodoList";
 import { CheckpointNavComp } from "./CheckpointNavComp";
 import { Container } from "./Container";
+import { LanguageContext } from "./LanguageContext";
 
 export function CheckpointPractice() {
   return <CheckpointNavComp />;
@@ -65,9 +66,22 @@ export function App7() {
 }
 
 export function App8() {
+  const [lang, selectLang] = useState("en");
+
+  function handleLangSelect(event) {
+    console.log(event.target.value);
+    selectLang(event.target.value);
+  }
+
   return (
     <StrictMode>
-      <Clock />
+      <select name="lang" onChange={handleLangSelect}>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+      </select>
+      <LanguageContext.Provider value={lang}>
+        <Clock />
+      </LanguageContext.Provider>
     </StrictMode>
   );
 }
@@ -122,7 +136,10 @@ export function App14() {
   return (
     <Container title="This is a container title">
       <div>
-        <h4>This is a container content. I'm passed as a children!! Not like the title, which is passed as a string prop.</h4>
+        <h4>
+          This is a container content. I'm passed as a children!! Not like the
+          title, which is passed as a string prop.
+        </h4>
       </div>
     </Container>
   );

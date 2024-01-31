@@ -2,7 +2,9 @@ import { useHookGitHubUser } from "./useHookGithubUser";
 
 export function HookGithubUser({username}){
     
-    const data = useHookGitHubUser(username)
+    const {data, fetchUser} = useHookGitHubUser(username)
+
+    fetchUser(username)
     
     return (
         <div style={{display:"flex", gap:'5px', alignItems: 'center'}}>

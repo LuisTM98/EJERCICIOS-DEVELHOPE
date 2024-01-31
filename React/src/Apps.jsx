@@ -18,6 +18,8 @@ import { LanguageContext } from "./LanguageContext";
 import { GitHubUser } from "./GitHubUser";
 import { GitHubUsers } from "./GitHubUsers";
 import { HookCounter } from "./HookCounter";
+import { useHookForm } from "./useHookForm";
+import { HookForm } from "./HookForm";
 
 export function CheckpointPractice() {
   return <CheckpointNavComp />;
@@ -158,4 +160,8 @@ export function App16() {
 
 export function App17() {
   return <HookCounter />;
+}
+
+export function App18() {
+  return <HookForm />;
 }

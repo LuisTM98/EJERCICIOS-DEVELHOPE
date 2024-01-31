@@ -20,6 +20,7 @@ import { GitHubUsers } from "./GitHubUsers";
 import { HookCounter } from "./HookCounter";
 import { HookForm } from "./HookForm";
 import { HookGithubUser } from "./HookGithubUser";
+import { HookCurrentLocation } from "./HookCurrentLocation";
 
 export function CheckpointPractice() {
   return <CheckpointNavComp />;
@@ -168,4 +169,8 @@ export function App18() {
 
 export function App19(){
   return <HookGithubUser username={'ltm98'} />
+}
+
+export function App20(){
+  return <HookCurrentLocation/>
 }

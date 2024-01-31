@@ -17,6 +17,7 @@ import { Container } from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { GitHubUser } from "./GitHubUser";
 import { GitHubUsers } from "./GitHubUsers";
+import { HookCounter } from "./HookCounter";
 
 export function CheckpointPractice() {
   return <CheckpointNavComp />;
@@ -147,14 +148,14 @@ export function App14() {
   );
 }
 
-export function App15(){
-  return(
-    <GitHubUser username='ltm98'/>
-  )
+export function App15() {
+  return <GitHubUser username="ltm98" />;
 }
 
-export function App16(){
-  return(
-    <GitHubUsers />
-  )
+export function App16() {
+  return <GitHubUsers />;
+}
+
+export function App17() {
+  return <HookCounter />;
 }

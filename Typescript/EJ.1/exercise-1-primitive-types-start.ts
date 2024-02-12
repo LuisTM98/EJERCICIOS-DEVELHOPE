@@ -4,13 +4,13 @@
 
 // Add type annotations to each of these variables.
 
-let country = "Italy";
+let country: string = "Italy";
 
 let year = undefined;
 
-let averageTemperature = 23.6;
+let averageTemperature: number = 23.6;
 
-let visited = true;
+let visited: boolean = true;
 
 let currency = null;
 

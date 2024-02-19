@@ -1,26 +1,15 @@
+"use strict";
 /**
  * START: Follow the instructions below.
  */
-
+Object.defineProperty(exports, "__esModule", { value: true });
 // Fix this use of the `Record` utility type so it constructs a valid type.
-
-const currency: Record<string, string> = {
+var currency = {
     name: "United States dollar",
     code: "USD",
     symbol: "$",
 };
-
-// Add a type annotation to the `currencies` variable that uses
-// the `Record` utility type.
-// Hint: Pass the `Currency` type as the second type argument to `Record<>`.
-
-interface Currency {
-    name: string;
-    code: string;
-    symbol: string;
-}
-
-const currencies: Record<string, Currency> = {
+var currencies = {
     france: {
         name: "Euro",
         code: "EUR",
@@ -37,7 +26,3 @@ const currencies: Record<string, Currency> = {
         symbol: "$",
     }
 };
-
-// ----
-
-export {};

@@ -1,9 +1,8 @@
-import { log } from "console";
 import express from "express";
 import "express-async-errors";
-import { request } from "http";
 import morgan from "morgan";
 import Joi, { ObjectSchema } from "joi";
+import { getAll, getOneByID, create, updateByID, deleteByID } from "./controllers/planets.js";
 
 const app = express();
 const port = 3000;
@@ -16,71 +15,22 @@ app.use((req, res, next) => {
     next();
 });
 
-
-type Planet = {
-  id: number;
-  name: string;
-};
-
-type Planets = Planet[];
-
-let planets: Planets = [
-  {
-    id: 1,
-    name: "Earth",
-  },
-  {
-    id: 2,
-    name: "Mars",
-  },
-];
-
 const planetSchema = Joi.object({
   id: Joi.number().integer().required(),
   name: Joi.string().required()
 });
 
-// [EXERCISE 2 EXPRESS]
+// [EXERCISE 3 EXPRESS]
 
-app.get("/api/planets/", (req, res) => {
-  res.status(200).json(planets);
-});
+app.get("/api/planets/", getAll);
 
-app.get("/api/planets/:id", (req, res) => {
-  const { id } = req.params;
-  const planet = planets.find((planet) => planet.id === Number(id));
+app.get("/api/planets/:id", getOneByID);
 
-  res.status(200).json(planet);
-});
+app.post("/api/planets", create);
 
-app.post("/api/planets", (req, res) => {
-  const { error } = planetSchema.validate(req.body);
+app.put("/api/planets/:id", updateByID)
 
-  if (error) {
-    return res.status(400).json({ error: error.details[0].message });
-  }
-  const { id, name } = req.body;
-  const newPlanet = { id, name };
-  planets = [...planets, newPlanet];
-
-  console.log(planets);
-  res.status(201).json({ msg: "Planets got updated" });
-});
-
-app.put("/api/planets/:id", (req, res) => {
-  const { id } = req.params
-  const {name} = req.body
-  planets = planets.map(p => p.id === Number(id) ? ({...p, name}) : p)
-  console.log(planets)
-
-  res.status(200).json({msg: 'All good'})
-})
-
-app.delete("/api/planets/:id", (req,res) => {
-  const {id} = req.params
-  planets = planets.filter(p => p.id !== Number(id))
-  res.status(200).json({msg: 'All good'})
-})
+app.delete("/api/planets/:id", deleteByID)
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);

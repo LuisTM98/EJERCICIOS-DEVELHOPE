@@ -3,6 +3,7 @@ import express from "express";
 import "express-async-errors";
 import { request } from "http";
 import morgan from "morgan";
+import Joi, { ObjectSchema } from "joi";
 
 const app = express();
 const port = 3000;
@@ -34,6 +35,13 @@ let planets: Planets = [
   },
 ];
 
+const planetSchema = Joi.object({
+  id: Joi.number().integer().required(),
+  name: Joi.string().required()
+});
+
+// [EXERCISE 2 EXPRESS]
+
 app.get("/api/planets/", (req, res) => {
   res.status(200).json(planets);
 });
@@ -46,6 +54,11 @@ app.get("/api/planets/:id", (req, res) => {
 });
 
 app.post("/api/planets", (req, res) => {
+  const { error } = planetSchema.validate(req.body);
+
+  if (error) {
+    return res.status(400).json({ error: error.details[0].message });
+  }
   const { id, name } = req.body;
   const newPlanet = { id, name };
   planets = [...planets, newPlanet];
@@ -53,6 +66,21 @@ app.post("/api/planets", (req, res) => {
   console.log(planets);
   res.status(201).json({ msg: "Planets got updated" });
 });
+
+app.put("/api/planets/:id", (req, res) => {
+  const { id } = req.params
+  const {name} = req.body
+  planets = planets.map(p => p.id === Number(id) ? ({...p, name}) : p)
+  console.log(planets)
+
+  res.status(200).json({msg: 'All good'})
+})
+
+app.delete("/api/planets/:id", (req,res) => {
+  const {id} = req.params
+  planets = planets.filter(p => p.id !== Number(id))
+  res.status(200).json({msg: 'All good'})
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);

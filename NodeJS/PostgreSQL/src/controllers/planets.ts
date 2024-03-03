@@ -13,6 +13,7 @@ const setupDb = async () => {
     CREATE TABLE planets(
       id SERIAL NOT NULL PRIMARY KEY,
       name TEXT NOT NULL
+      image TEXT
     )`);
 
   await db.none(`INSERT INTO planets (name) VALUES ('Earth')`);
@@ -77,4 +78,8 @@ const deleteByID = async (req: Request, res: Response) => {
   console.log(planets)
 };
 
-export { getAll, getOneByID, create, updateByID, deleteByID };
+const createImage = async( req: Request, res: Response) =>{
+res.status(201).json({msg: "planet image uploaded successfully"})
+}
+
+export { getAll, getOneByID, create, updateByID, deleteByID, createImage};

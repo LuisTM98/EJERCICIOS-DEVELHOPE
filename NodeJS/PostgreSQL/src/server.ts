@@ -1,10 +1,12 @@
 import express from "express";
 import "express-async-errors";
 import morgan from "morgan";
-import { getAll, getOneByID, create, updateByID, deleteByID } from "./controllers/planets.js";
+import { getAll, getOneByID, create, updateByID, deleteByID, createImage} from "./controllers/planets.js";
+
 
 const app = express();
 const port = 3000;
+
 
 app.use(morgan("dev"));
 app.use(express.json());
@@ -25,6 +27,8 @@ app.post("/api/planets", create);
 app.put("/api/planets/:id", updateByID)
 
 app.delete("/api/planets/:id", deleteByID)
+
+app.post("/api/planets/:id/image", createImage)
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);

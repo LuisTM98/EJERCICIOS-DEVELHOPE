@@ -1,7 +1,6 @@
 import express from "express";
 import "express-async-errors";
 import morgan from "morgan";
-import Joi, { ObjectSchema } from "joi";
 import { getAll, getOneByID, create, updateByID, deleteByID } from "./controllers/planets.js";
 
 const app = express();
@@ -13,11 +12,6 @@ app.use((req, res, next) => {
     console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
     console.log('Request Body:', req.body);
     next();
-});
-
-const planetSchema = Joi.object({
-  id: Joi.number().integer().required(),
-  name: Joi.string().required()
 });
 
 // [EXERCISE 3 EXPRESS]

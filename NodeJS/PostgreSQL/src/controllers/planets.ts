@@ -12,7 +12,7 @@ const setupDb = async () => {
 
     CREATE TABLE planets(
       id SERIAL NOT NULL PRIMARY KEY,
-      name TEXT NOT NULL
+      name TEXT NOT NULL,
       image TEXT
     )`);
 
@@ -50,36 +50,48 @@ const create = async (req: Request, res: Response) => {
     return res.status(400).json({ error: error.details[0].message });
   }
   await db.none(`INSERT INTO planets (name) VALUES ($1)`, name);
-  
+
   res.status(201).json({ msg: "Planets got updated" });
 
-  const planets = await db.many(`SELECT * FROM planets`)
-  console.log(planets)
+  const planets = await db.many(`SELECT * FROM planets`);
+  console.log(planets);
 };
 
 const updateByID = async (req: Request, res: Response) => {
   const { id } = req.params;
   const { name } = req.body;
 
-  await db.none(`UPDATE planets SET name = $1 WHERE id=$2`, [name, id])
+  await db.none(`UPDATE planets SET name = $1 WHERE id=$2`, [name, id]);
 
   res.status(200).json({ msg: "All good" });
 
-  const planets = await db.many(`SELECT * FROM planets`)
-  console.log(planets)
+  const planets = await db.many(`SELECT * FROM planets`);
+  console.log(planets);
 };
 
 const deleteByID = async (req: Request, res: Response) => {
   const { id } = req.params;
-  await db.none(`DELETE FROM planets WHERE id=$1`, id)
+  await db.none(`DELETE FROM planets WHERE id=$1`, id);
   res.status(200).json({ msg: "All good" });
 
-  const planets = await db.many(`SELECT * FROM planets`)
-  console.log(planets)
+  const planets = await db.many(`SELECT * FROM planets`);
+  console.log(planets);
 };
 
-const createImage = async( req: Request, res: Response) =>{
-res.status(201).json({msg: "planet image uploaded successfully"})
-}
+const createImage = async (req: Request, res: Response) => {
+  console.log(req.file);
+  const { id } = req.params;
+  const fileName = req.file?.path;
 
-export { getAll, getOneByID, create, updateByID, deleteByID, createImage};
+  await db.none(`UPDATE planets SET image=$2 WHERE id=$1`, [id, fileName]);
+
+  if (fileName) {
+    res.status(201).json({ msg: "planet image uploaded successfully" });
+  } else {
+    res.status(400).json({ msg: "Error: no file" });
+  }
+  const planets = await db.many(`SELECT * FROM planets`);
+  console.log(planets);
+};
+
+export { getAll, getOneByID, create, updateByID, deleteByID, createImage };
